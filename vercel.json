@@ -1,7 +1,7 @@
 {
   "buildCommand": "npm run build",
   "framework": null,
-  "outputDirectory": ".",
+  "outputDirectory": "dist",
   "cleanUrls": true,
   "trailingSlash": false,
   "headers": [
