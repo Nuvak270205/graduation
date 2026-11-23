@@ -24,6 +24,17 @@ html {
     overflow-x: hidden;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+}
+
+img.memory-image,
+img.highlight-image,
+img.configured-image {
+    opacity: 1;
+}
+
 body.graduation-page {
     min-height: 100vh;
     min-height: 100dvh;
