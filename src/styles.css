@@ -1,0 +1,277 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.font-script {
+    font-family: 'Great Vibes', 'Alex Brush', cursive;
+}
+
+.font-serif-custom {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.polaroid-shadow {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+}
+
+.tape-effect {
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1px);
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body.graduation-page {
+    min-height: 100vh;
+    min-height: 100dvh;
+    overflow-x: hidden;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.graduation-frame {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+#guest-name {
+    max-width: 100%;
+    font-family: 'Great Vibes', 'Alex Brush', cursive;
+    font-size: clamp(2.35rem, 11vw, 2.75rem);
+    line-height: 1.15;
+    letter-spacing: 0.015em;
+    transform: rotate(-1deg);
+    background: linear-gradient(120deg, #5d3a43 0%, #d58ca2 52%, #7b4a57 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.72),
+        0 4px 14px rgba(173, 112, 132, 0.18);
+    overflow-wrap: anywhere;
+}
+
+#guest-signature {
+    font-family: 'Great Vibes', 'Alex Brush', cursive;
+    font-size: clamp(1.75rem, 8vw, 2.2rem);
+    line-height: 1.05;
+    letter-spacing: 0.015em;
+    transform: rotate(-2deg);
+    display: inline-block;
+    background: linear-gradient(115deg, #4a5d31 0%, #718450 48%, #b08b57 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.78),
+        0 3px 10px rgba(74, 93, 49, 0.16);
+}
+
+.memory-image,
+.configured-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    filter: saturate(0.96) contrast(1.02) sepia(0.04);
+}
+
+.highlight-portrait {
+    height: clamp(29rem, 118vw, 34rem);
+    background: #d7c1a1;
+    isolation: isolate;
+}
+
+.highlight-image {
+    object-position: 58% 48%;
+    filter: saturate(0.94) contrast(1.02) brightness(0.98);
+}
+
+.portrait-shade {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+        linear-gradient(180deg, rgba(74, 55, 43, 0.38) 0%, rgba(74, 55, 43, 0.12) 24%, transparent 43%),
+        linear-gradient(to top right, rgba(35, 20, 10, 0.45) 0%, rgba(35, 20, 10, 0.12) 22%, transparent 55%);
+    pointer-events: none;
+}
+
+.portrait-graduate,
+.portrait-person {
+    position: absolute;
+    z-index: 2;
+    color: #fffaf1;
+    text-shadow: 0 2px 12px rgba(48, 34, 25, 0.58);
+}
+
+.portrait-graduate {
+    top: clamp(1.05rem, 4.6vw, 1.65rem);
+    left: clamp(1rem, 5.5vw, 1.75rem);
+}
+
+.graduate-script {
+    font-family: 'Alex Brush', 'Great Vibes', cursive;
+    position: relative;
+    font-size: clamp(2.85rem, 13.5vw, 4.55rem);
+    line-height: 0.78;
+    letter-spacing: 0.015em;
+    transform: rotate(-2deg);
+    background: linear-gradient(115deg, #fffdf7 8%, #fff3d6 45%, #f5e6bd 72%, #fffaf0 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 2px 10px rgba(45, 25, 10, 0.35);
+    white-space: nowrap;
+}
+
+.graduate-class {
+    margin-top: clamp(0.55rem, 2vw, 0.8rem);
+    margin-left: clamp(0.35rem, 2vw, 0.7rem);
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(0.55rem, 2.7vw, 0.72rem);
+    font-weight: 500;
+    letter-spacing: 0.24em;
+}
+
+.portrait-person {
+    left: 6%;
+    bottom: clamp(0.65rem, 3.2vw, 1.15rem);
+    width: 48%;
+    max-width: 48%;
+    text-align: left;
+}
+
+.portrait-name {
+    font-family: 'Alex Brush', 'Great Vibes', cursive;
+    font-style: normal;
+    font-size: clamp(1.65rem, 7vw, 2.2rem);
+    line-height: 0.95;
+    letter-spacing: 0.015em;
+    font-weight: 600;
+    transform: rotate(-1deg);
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background: linear-gradient(115deg, #fffdf8 5%, #fff2cf 48%, #fffaf1 82%, #ead49f 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 2px 10px rgba(45, 25, 10, 0.35);
+}
+
+.portrait-name-graduate {
+    font-size: clamp(1.65rem, 7vw, 2.2rem);
+    line-height: 0.88;
+    letter-spacing: 0.02em;
+    transform: rotate(-1deg);
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background: linear-gradient(115deg, #fffdf8 5%, #fff2cf 48%, #fffaf1 82%, #ead49f 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 2px 10px rgba(45, 25, 10, 0.35);
+}
+
+.portrait-major {
+    max-width: 100%;
+    text-align: left;
+    white-space: normal;
+}
+
+.portrait-school {
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(7px, 1.9vw, 10px);
+    line-height: 1.2;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+}
+
+.script-reveal,
+#guest-name,
+#guest-signature {
+    position: relative;
+}
+
+.script-reveal.is-visible,
+#guest-name.is-visible,
+#guest-signature.is-visible {
+    animation: script-fade-up 1.15s cubic-bezier(.22,.61,.36,1) both;
+}
+
+.graduate-script.is-visible {
+    animation: script-fade-up 1.15s cubic-bezier(.22,.61,.36,1) both;
+}
+
+.script-reveal.is-visible::after,
+.graduate-script::after {
+    content: "";
+    position: absolute;
+    top: -15%;
+    bottom: -15%;
+    left: -18%;
+    width: 18%;
+    background: linear-gradient(90deg, transparent, rgba(255, 248, 220, 0.7), transparent);
+    transform: skewX(-18deg);
+    pointer-events: none;
+    opacity: 0;
+    animation: script-glimmer 1.8s 0.75s ease-out both;
+}
+
+@keyframes script-fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(14px) rotate(-2deg);
+        filter: blur(3px);
+    }
+    70% {
+        opacity: 1;
+        filter: blur(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) rotate(-2deg);
+        filter: blur(0);
+    }
+}
+
+@keyframes script-glimmer {
+    0% { left: -18%; opacity: 0; }
+    25% { opacity: 0.75; }
+    100% { left: 115%; opacity: 0; }
+}
+
+.portrait-major {
+    margin-top: clamp(0.32rem, 1.5vw, 0.48rem);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(0.82rem, 3.6vw, 1.02rem);
+    line-height: 1.25;
+}
+
+.portrait-school {
+    margin-top: clamp(0.2rem, 1vw, 0.35rem);
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(0.48rem, 2vw, 0.61rem);
+    line-height: 1.35;
+    letter-spacing: 0.09em;
+}
+
+@media (max-width: 359px) {
+    .graduation-frame {
+        border-radius: 0;
+    }
+
+    .highlight-portrait {
+        height: 27.5rem;
+    }
+
+    .portrait-person {
+        width: 52%;
+    }
+}
