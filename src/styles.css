@@ -35,6 +35,53 @@ img.configured-image {
     opacity: 1;
 }
 
+.invitation-preloader {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: grid;
+    place-items: center;
+    background: #fcfbf7;
+    color: #70533b;
+    opacity: 1;
+    transition: opacity 0.5s ease, visibility 0s linear 0.5s;
+}
+
+.invitation-preloader.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.preloader-content {
+    display: grid;
+    justify-items: center;
+    gap: 0.65rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+}
+
+.preloader-heart {
+    color: #c99b65;
+    font-size: 2rem;
+    line-height: 1;
+    animation: preloader-pulse 1s ease-in-out infinite;
+}
+
+@keyframes preloader-pulse {
+    50% { transform: scale(1.16); opacity: 0.72; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .invitation-preloader,
+    .preloader-heart {
+        transition-duration: 0.01ms;
+        animation-duration: 0.01ms;
+        animation-iteration-count: 1;
+    }
+}
+
 body.graduation-page {
     min-height: 100vh;
     min-height: 100dvh;
