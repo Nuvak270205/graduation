@@ -15,7 +15,9 @@ const GUESTS = [
     { id: "anh-thu", name: "Anh Thư", isFamily: false },
     { id: "hien-le", name: "Hiến Lê", isFamily: false },
     { id: "phuc-uyen", name: "Phúc & Uyên", isFamily: false },
-    { id: "khanh-duy", name: "Khánh Duy", isFamily: false }
+    { id: "chien", name: "Chiến", title: "Anh", isFamily: false },
+    { id: "khanh-duy", name: "Khánh Duy", title: "", isFamily: false },
+    { id: "thanh-duy", name: "Khánh Duy", title: "", isFamily: false }
 ];
 
 const searchParams = new URLSearchParams(window.location.search);
@@ -38,7 +40,7 @@ if (guest?.isFamily) {
         "Sự hiện diện của Gia đình trong ngày tốt nghiệp là niềm vui và món quà quý giá nhất, giúp ngày trọng đại của con thêm trọn vẹn. Con kính mời Gia đình cùng đến chung vui và chứng kiến cột mốc ý nghĩa này.";
 } else if (guest) {
     salutationElement.textContent = "THÂN MỜI";
-    guestNameElement.textContent = "Bạn";
+    guestNameElement.textContent = guest.title === undefined ? "Bạn" : guest.title;
     guestSignatureElement.textContent = guest.name;
 } else {
     salutationElement.textContent = "THÂN MỜI";

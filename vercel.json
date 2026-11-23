@@ -21,7 +21,9 @@
     { "source": "/anh-thu", "destination": "/index.html" },
     { "source": "/hien-le", "destination": "/index.html" },
     { "source": "/phuc-uyen", "destination": "/index.html" },
-    { "source": "/khanh-duy", "destination": "/index.html" }
+    { "source": "/khanh-duy", "destination": "/index.html" },
+    { "source": "/thanh-duy", "destination": "/index.html" },
+    { "source": "/chien", "destination": "/index.html" }
   ],
   "headers": [
     {
