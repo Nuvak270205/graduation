@@ -4,15 +4,24 @@
   "outputDirectory": "dist",
   "cleanUrls": true,
   "trailingSlash": false,
-  "routes": [
-    {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/.*",
-      "dest": "/index.html",
-      "status": 200
-    }
+  "rewrites": [
+    { "source": "/family", "destination": "/index.html" },
+    { "source": "/nguyen-anh-thu", "destination": "/index.html" },
+    { "source": "/anh-nguyen", "destination": "/index.html" },
+    { "source": "/thanh-ngan", "destination": "/index.html" },
+    { "source": "/thanh-tran", "destination": "/index.html" },
+    { "source": "/hoang-khuong", "destination": "/index.html" },
+    { "source": "/to-nhu", "destination": "/index.html" },
+    { "source": "/long-nhi", "destination": "/index.html" },
+    { "source": "/kim-huong", "destination": "/index.html" },
+    { "source": "/thuy-kieu", "destination": "/index.html" },
+    { "source": "/nhu-y", "destination": "/index.html" },
+    { "source": "/son-phi", "destination": "/index.html" },
+    { "source": "/tan-tai", "destination": "/index.html" },
+    { "source": "/anh-thu", "destination": "/index.html" },
+    { "source": "/hien-le", "destination": "/index.html" },
+    { "source": "/phuc-uyen", "destination": "/index.html" },
+    { "source": "/khanh-duy", "destination": "/index.html" }
   ],
   "headers": [
     {

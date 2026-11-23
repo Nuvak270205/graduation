@@ -1,5 +1,5 @@
 const GUESTS = [
-    { id: "family", name: "Gia đình Kim Ngân", sign: "Family", isFamily: true },
+    { id: "family", name: "Gia đình", sign: "Family", isFamily: true },
     { id: "nguyen-anh-thu", name: "Nguyễn Anh Thư", isFamily: false },
     { id: "anh-nguyen", name: "Ánh Nguyên", isFamily: false },
     { id: "thanh-ngan", name: "Thanh Ngân", isFamily: false },
@@ -18,7 +18,10 @@ const GUESTS = [
     { id: "khanh-duy", name: "Khánh Duy", isFamily: false }
 ];
 
-const guestId = new URLSearchParams(window.location.search).get("id");
+const searchParams = new URLSearchParams(window.location.search);
+const guestId = searchParams.has("id")
+    ? searchParams.get("id")
+    : window.location.pathname.replace(/^\/|\/$/g, "");
 const guest = GUESTS.find((entry) => entry.id === guestId);
 const salutationElement = document.getElementById("guest-salutation");
 const guestNameElement = document.getElementById("guest-name");
